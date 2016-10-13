@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=004013BA
+eax=00000000 ebx=00000004 ecx=00000002 edx=200102D0 esi=00000000 edi=00000002
+ebp=0022CC68 esp=0022CBD0 program=E:\cygwin\home\Administrator\CodeForces\Round353\a.exe, pid 62592, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+0022CC68  004013BA (00000000, 0022CD84, 0022CD28, 6100842E)
+0022CD28  6100842E (00000000, 0022CD84, 61007530, 00000000)
+End of stack trace
