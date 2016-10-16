@@ -5,9 +5,9 @@ SegmentTree2D 15D
 SegmentTree build type Round370E
 BigInteger 40D
 SparseTable Round361 D
-Aho-corosick Round362 F
+Aho-corosick Round362 F TCER2017R1 E
 Angle compare Round363 F
-maxFlow 103F (dinic, push to front)
+maxFlow TCER2017R1 D2_flow  103F (dinic, push to front) 
 trie (Round367D)
 integer decomposition ROund365E
 Dijstra Round372 D
@@ -24,6 +24,10 @@ chinese remainder theorem non co-prime ICCER1F
 4.数组越界，循环里不要用N，定义n。
 5.ll操作耗时为int4倍。
 
+
+wildcard matching?
+Recover Binary Search Tree
+Maximal Rectangle
 
 (x-1)(x+1)=n1*n2
 
@@ -52,5 +56,11 @@ gcd(a,b,x,y)
 	y = (x' - qy');
 }
 
+x1 + x2 = c1
+x2 + x3 = c2
+x1 + x3 = c3
+
+x1 + x2 + x3 = (c1 + c2 + c3) / 2
+x1 = (c1 + c2 + c3) / 2 - c2
 
 

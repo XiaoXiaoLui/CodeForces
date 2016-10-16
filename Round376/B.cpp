@@ -23,11 +23,48 @@ using namespace std;
 
 typedef long long ll;
 
-
+const int N = 2e5 + 100;
+int a[N];
 
 int main()
 {
 	// USE_IOSTREAM;
+	int n, i;
+	
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	
+	bool ok = true;
+	for (i = 1; i <= n && ok; i++)
+	{
+		if (a[i] < 0)
+		{
+			ok = false;
+			break;
+		}
+		
+		if (a[i] & 1)
+		{
+			if (i == n)
+			{
+				ok = false;
+				break;
+			}
+			a[i + 1]--;
+		}
+	}
+	
+	if (ok)
+	{
+		printf("YES\n");
+	}
+	else
+	{
+		printf("NO\n");
+	}
 	
 	return 0;
 }

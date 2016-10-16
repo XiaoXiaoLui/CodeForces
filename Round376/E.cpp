@@ -23,11 +23,28 @@ using namespace std;
 
 typedef long long ll;
 
-
+const int N = 2e5 + 100;
+int a[N];
+int sum[N];
 
 int main()
 {
 	// USE_IOSTREAM;
+	int n, i, cur, best;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		scanf("%d", &a[i]);
+		sum[i] = sum[i - 1] + a[i];
+	}
 	
+	best = sum[n];
+	for (i = n - 1; i >= 1; i--)
+	{
+		cur = best;
+		best = max(best, sum[i] - cur);
+	}
+	
+	printf("%d\n", cur);
 	return 0;
 }

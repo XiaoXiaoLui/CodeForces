@@ -27,7 +27,20 @@ typedef long long ll;
 
 int main()
 {
-	// USE_IOSTREAM;
+	USE_IOSTREAM;
+	string str;
+	int i, ans;
+	cin >> str;
+	char cur = 'a';
+	ans = 0;
+	for (i = 0; i < str.size(); i++)
+	{
+		int tmp = abs(cur - str[i]);
+		ans += min(tmp, 26 - tmp);
+		cur = str[i];
+	}
+	
+	cout << ans << endl;
 	
 	return 0;
 }
