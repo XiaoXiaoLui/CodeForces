@@ -11,12 +11,13 @@ maxFlow TCER2017R1 D2_flow  103F (dinic, push to front)
 trie (Round367D)
 integer decomposition ROund365E
 Dijstra Round372 D
-Fast Fibonacci, Lazy propagation of segment tree, Round373D
+Fast Fibonacci, Lazy propagation of segment tree, Round373E
 3D binary search, hill climing, 106E
 euler path Hierholzer's algorithm 36E, Round375E
 chinese remainder theorem non co-prime ICCER1F
 find palindrome in O(n)  17E
 find bridge tarjan Round377 F
+SegmentTree2D with propagation LeetCode Perfect_Rectangle
 
 注意容易出bug：
 1.结果范围，是否要ll，double可能很大1e15.
