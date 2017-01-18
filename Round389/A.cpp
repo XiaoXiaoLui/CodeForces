@@ -32,7 +32,17 @@ int main()
 	#ifndef ONLINE_JUDGE
 	//freopen("1.txt", "r", stdin);
 	#endif
-	
+	int n, m, k, i, j, dir;
+	cin >> n >> m >> k;
+	k--;
+	j = k / (2*m);
+	i = k % (2*m);
+	dir = i % 2;
+	i = i / 2;
+	j++;
+	i++;
+	char ch = dir ? 'R' : 'L';
+	cout << j << " " << i << " " << ch << endl;
 	
 	return 0;
 }

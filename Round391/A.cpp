@@ -25,14 +25,34 @@ using namespace std;
 typedef long long ll;
 
 
+// "Bulbasaur".
+int cnt[256];
 
 int main()
 {
-	// USE_IOSTREAM;
+	USE_IOSTREAM;
 	#ifndef ONLINE_JUDGE
 	//freopen("1.txt", "r", stdin);
 	#endif
 	
+	int i;
+	string s;
+	cin >> s;
+	for (i = 0; i < s.size(); i++)
+	{
+		cnt[s[i]]++;
+	}
+	
+	int ans = 1e9;
+	ans = min(ans, cnt['B']);
+	ans = min(ans, cnt['u'] / 2);
+	ans = min(ans, cnt['l']);
+	ans = min(ans, cnt['b']);
+	ans = min(ans, cnt['a'] / 2);
+	ans = min(ans, cnt['s']);
+	ans = min(ans, cnt['r']);
+	
+	cout << ans << endl;
 	
 	return 0;
 }

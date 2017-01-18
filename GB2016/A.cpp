@@ -32,6 +32,16 @@ int main()
 	#ifndef ONLINE_JUDGE
 	//freopen("1.txt", "r", stdin);
 	#endif
+	int n, k, i;
+	cin >> n >> k;
+	int rest = 240 - k;
+	int sum = 0;
+	for (i = 0; sum + 5 * (i + 1) <= rest && i < n; i++)
+	{
+		sum += 5 * (i + 1);
+	}
+	
+	cout << i << endl;
 	
 	
 	return 0;

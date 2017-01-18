@@ -29,10 +29,6 @@ typedef long long ll;
 int main()
 {
 	// USE_IOSTREAM;
-	#ifndef ONLINE_JUDGE
-	//freopen("1.txt", "r", stdin);
-	#endif
-	
 	
 	return 0;
 }

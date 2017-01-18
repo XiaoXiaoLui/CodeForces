@@ -24,7 +24,8 @@ using namespace std;
 
 typedef long long ll;
 
-
+const int N = 1e6 + 100;
+bool isPrime[N];
 
 int main()
 {
@@ -32,6 +33,27 @@ int main()
 	#ifndef ONLINE_JUDGE
 	//freopen("1.txt", "r", stdin);
 	#endif
+    
+    int i, j, n, m;
+    memset(isPrime, 1, sizeof(isPrime));
+    
+    for (i = 2; i < N; i++)
+    {
+        for (j = i + i; j < N; j += i)
+        {
+            isPrime[j] = false;
+        }
+    }
+    
+    cin >> n;
+    for (m = 1; m <= 1000; m++)
+    {
+        if (!isPrime[n*m + 1])
+        {
+            break;
+        }
+    }
+    cout << m << endl;
 	
 	
 	return 0;

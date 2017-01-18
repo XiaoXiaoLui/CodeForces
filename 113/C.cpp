@@ -24,7 +24,8 @@ using namespace std;
 
 typedef long long ll;
 
-
+const int N = 3e8 + 100;
+vector<bool> isPrime(N, true);
 
 int main()
 {
@@ -33,6 +34,39 @@ int main()
 	//freopen("1.txt", "r", stdin);
 	#endif
 	
+	int l, r, ans, i, j;
+	cin >> l >> r;
+	for (i = 3; i * i <= r; i += 2)
+	{
+		if (!isPrime[i])
+		{
+			continue;
+		}
+		for (j = i + i; j <= r; j += i)
+		{
+			isPrime[j] = false;
+		}
+	}
 	
+	int start = (l / 4) * 4 + 1;
+	if (start < l || start == 1)
+	{
+		start += 4;
+	}
+	
+	ans = 0;
+	for (i = start; i <= r; i += 4)
+	{
+		if (isPrime[i])
+		{
+			ans++;
+		}
+	}
+	
+	if (l <= 2 && 2 <= r)
+	{
+		ans++;
+	}
+	cout << ans << endl;
 	return 0;
 }
